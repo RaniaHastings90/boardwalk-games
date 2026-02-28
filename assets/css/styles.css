@@ -24,6 +24,16 @@
         color: var(--highlight-color);
     }
 
+    /* Nav Bar styles */
+    
+    #navbar {
+        background-color: var(--primary-color);
+
+    }
+
+    #navbar .logo {
+        width: 30px;
+    }
     /* grid visualisation CSS for testing
 
     .container,
@@ -35,13 +45,4 @@
         border: 2px solid white;
         background-color: lightgray;
     }   */
-/* Nav Bar styles */
 
-
-    media query (max-width: 768px) {
-        body {
-            font-size: 14px;
-            display : flex;
-            flex-direction: row;
-              justify-content: flex-end; }
-    }
