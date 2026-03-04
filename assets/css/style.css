@@ -64,6 +64,10 @@
         background-color: var(--highlight-color);
         color: white;
     }
+
+    .gamereserve-button {
+       float: right;
+    }
     /* Nav Bar styles */
     
     #navbar {
