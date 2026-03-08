@@ -2,139 +2,165 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap');
 
 /* CSS variables*/
- :root {
+:root {
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Macondo', cursive;
-    --primary-color: #3a2620; /* dark brown */
-    --secondary-color: #aa9581; /* light brown */
-    --highlight-color: #416a8e; /*blue */
-    --highlight-color-light: #7a9fc2;/*light blue */
+    --primary-color: #3a2620;
+    /* dark brown */
+    --secondary-color: #aa9581;
+    /* light brown */
+    --highlight-color: #416a8e;
+    /*blue */
+    --highlight-color-light: #7a9fc2;
+    /*light blue */
 }
-    /* Global styles */
 
-    body {
-        font-family: var(--primary-font);
-    }
+/* Global styles */
 
-    h1,h2,h3 {
-        font-family: var(--secondary-font);
-        color: var(--primary-color);
-    }
+body {
+    font-family: var(--primary-font);
+    padding-top: 57.65px; /* pushed the top of the header down under the fixed nav bar */
+}
 
-    h1,h2 {
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
+
+h1,
+h2 {
     text-transform: uppercase;
 }
-    h2 {
-        margin-bottom: 2rem;
-    }
 
-    .sub-heading-color {
-        color: var(--highlight-color);
-    }
+h2 {
+    margin-bottom: 2rem;
+}
 
-    .section {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
+.sub-heading-color {
+    color: var(--highlight-color);
+}
 
-    /* buttons */
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
-    .custom-button-filled {
-        border: 2px solid var(--highlight-color);
-        background-color: var(--highlight-color);
-        color: white
-    }
+/* buttons */
 
-    .custom-button-filled:hover {
-        border: 2px solid var(--secondary-color);
-        background-color: var(--secondary-color);
-        color: white;
-    }
+.custom-button-filled {
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: white
+}
 
-    .custom-button-outline {
-        border: 2px solid var(--highlight-color);
-        padding: 7px 25px;
-        background-color: transparent;
-        color: var(--highlight-color);
-    }
+.custom-button-filled:hover {
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+}
 
-    .custom-button-outline:hover {
-        border: 2px solid var(--highlight-color);
-        padding: 7px 25px;
-        background-color: var(--highlight-color);
-        color: white;
-    }
+.custom-button-outline {
+    border: 2px solid var(--highlight-color);
+    padding: 7px 25px;
+    background-color: transparent;
+    color: var(--highlight-color);
+}
 
-    .gamereserve-button {
-       float: right;
-    }
-    /* Nav Bar styles */
-    
-    #navbar {
-        background-color: var(--primary-color);
+.custom-button-outline:hover {
+    border: 2px solid var(--highlight-color);
+    padding: 7px 25px;
+    background-color: var(--highlight-color);
+    color: white;
+}
 
-    }
-  
-    #navbar .logo {
-        width: 30px;
-    }
 
-      /* header */
-    #header .lead {
-        font-family: var(--secondary-font);
-    }
+/* Nav Bar styles */
 
-    /* Services */
-    #services .card-footer {
-        font-weight: bold;
-        color: var(--highlight-color);
-        background-color: transparent;
-    }
+#navbar {
+    background-color: var(--primary-color);
 
-    #services .card {
-        margin-bottom: 1.5rem;
-    }
+}
 
-    /* Game library sections */
-    #new-games .card,
-     #fav-games .card{
-        border: none;
-    }
+#navbar .logo {
+    width: 30px;
+}
 
-    /* footer / contact */
-    #contact {
-        background-color: var(--primary-color);
-        color: white;
-        padding-bottom: 3rem;
-    }
+/* header */
+#header .lead {
+    font-family: var(--secondary-font);
+}
 
-    #contact h2 {
-        color: white;
-    }
-    #contact .sub-heading-color {
-        color: var(--highlight-color-light);
-    }
+/* Services */
+#services .card-footer {
+    font-weight: bold;
+    color: var(--highlight-color);
+    background-color: transparent;
+}
 
-    #contact i {
-        color: var(--secondary-color);
-        font-size: 1.2rem;
-        margin-right: 15px;
-        transition: color 0.3a ease-in-out;
-    }
+#services .card {
+    margin-bottom: 1.5rem;
+}
 
-    #contact .social-links i {
-        color: var(--highlight-color-light);
-        font-size: 1.9rem;
-    }
+/* Events */
 
-    #contact .social-links i:hover {
-        color: var(--secondary-color);
-    }
+#events .discount-background {
+    /* student discount paragraph styling default on small screen */
+    display: block;
+    background-color: var(--highlight-color);
+    color: white;
+    font-size: 0.8rem;
+}
 
-    #contact .table-dark * {
-        background-color: transparent;
-    }
-     /*grid visualisation CSS for testing
+/* make table smaller */
+#events .table {
+    font-size: 0.7rem;
+}
+
+/* Game library sections */
+#new-games .card,
+#fav-games .card {
+    border: none;
+}
+
+/* footer / contact */
+#contact {
+    background-color: var(--primary-color);
+    color: white;
+    padding-bottom: 3rem;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact .sub-heading-color {
+    color: var(--highlight-color-light);
+}
+
+#contact i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
+
+}
+
+#contact .social-links i {
+    color: var(--highlight-color-light);
+    font-size: 1.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact .social-links i:hover {
+    color: var(--secondary-color);
+}
+
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+/*grid visualisation CSS for testing
   
     .container,
     .row{
@@ -146,37 +172,92 @@
         background-color: lightgray;
     }   */
 
-    /* media queries */
 
-    /* medium devices (tablets, 768px and up)*/
-    @media screen and (min-width: 768px) {
-        /* Make all services cards the same height for consistency */
-         #services .card-body { 
-            min-height: 191px;
-        }
+/* media queries */
+
+
+/* medium devices (tablets, 768px and up)*/
+@media screen and (min-width: 768px) {
+
+    /* Make all services cards the same height for consistency */
+    #services .card-body {
+        min-height: 191px;
     }
 
-     /* large devices (small laptops, 992px and up)*/
-    @media screen and (min-width: 992px) {
-        /* Make all services cards the same height for consistency */
-         #services .card-body { 
-            min-height: auto;
-        }
+    /* Events section- make paragraph under the table centred*/
+
+    #events .discount-background {
+        /* make the background shrink to fit text width */
+        background-color: var(--highlight-color);
+        color: white;
+        font-size: 1rem;
+        text-align: center;
     }
 
-     /* extra large devices (large desktops, 1200px and up)*/
-    @media screen and (min-width: 1200px) {
-        /* Make all services cards the same height for consistency */
-         #services .card-body { 
-            min-height: 220px;
-        }
+    /* make font for paragraph under the table  bigger*/
+
+
+    /* make event column narrower */
+    #events .event-col {
+        width: 33%;
     }
 
-     /* XXL devices (larger desktops, 1400px and up)*/
-    @media screen and (min-width: 1400px) {
-        /* Make all services cards the same height for consistency */
-         #services .card-body { 
-            min-height: 195px;
-        }
+    /* make date column narrower */
+    #events .date-col {
+        width: 18%;
     }
-    
+
+    /* make table font-size larger */
+    #events .table {
+        font-size: 1rem;
+    }
+}
+
+/* large devices (small laptops, 992px and up)*/
+@media screen and (min-width: 992px) {
+
+    /* Make all services cards the same height for consistency */
+    #services .card-body {
+        min-height: auto;
+    }
+}
+
+/* extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) {
+
+    /* Make all services cards the same height for consistency */
+    #services .card-body {
+        min-height: 220px;
+    }
+
+
+    /* Events section-  */
+
+    #events .discount-background * {
+        /* make the background shrink to fit text width */
+        background-color: var(--highlight-color);
+        color: white;
+        font-size: 1rem;
+    }
+
+    /* make table font bigger */
+    #events .table {
+        font-size: 1rem;
+    }
+
+}
+
+/* XXL devices (larger desktops, 1400px and up)*/
+@media screen and (min-width: 1400px) {
+
+    /* Make all services cards the same height for consistency */
+    #services .card-body {
+        min-height: 195px;
+    }
+
+    /* make date column in event section wider */
+
+    #events .date-col {
+        width: 20%;
+    }
+}
