@@ -1,3 +1,5 @@
+
+
 /* google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap');
 
@@ -19,7 +21,8 @@
 
 body {
     font-family: var(--primary-font);
-    padding-top: 57.65px; /* pushed the top of the header down under the fixed nav bar */
+    padding-top: 57.65px;
+    /* pushed the top of the header down under the fixed nav bar */
 }
 
 h1,
@@ -43,7 +46,8 @@ h2 {
 }
 
 .section {
-    padding-top: 4rem;  /*prevent the navbar overlap */
+    padding-top: 4rem;
+    /*prevent the navbar overlap */
 }
 
 /* buttons */
@@ -68,12 +72,10 @@ h2 {
 }
 
 .custom-button-outline:hover {
-    border: 2px solid var(--highlight-color);
-    padding: 7px 25px;
+
     background-color: var(--highlight-color);
     color: white;
 }
-
 
 /* Nav Bar styles */
 
@@ -113,11 +115,13 @@ h2 {
 }
 
 /* make table smaller */
+
 #events .table {
     font-size: 0.7rem;
 }
 
 /* Game library sections */
+
 #new-games .card,
 #fav-games .card {
     border: none;
@@ -148,6 +152,8 @@ h2 {
 #contact .social-links i {
     color: var(--highlight-color-light);
     font-size: 1.9rem;
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
 }
 
@@ -158,19 +164,6 @@ h2 {
 #contact .table-dark * {
     background-color: transparent;
 }
-
-/*grid visualisation CSS for testing
-  
-    .container,
-    .row{
-        border: 2px solid black;
-    }
-
-    .col-12 {
-        border: 2px solid white;
-        background-color: lightgray;
-    }   */
-
 
 /* media queries */
 
@@ -183,17 +176,14 @@ h2 {
         min-height: 191px;
     }
 
-    /* Events section- make paragraph under the table centred*/
+    /* Events section*/
 
     #events .discount-background {
-        /* make the background shrink to fit text width */
+        /* styling for paragraph under the event table */
         background-color: var(--highlight-color);
         color: white;
         font-size: 1rem;
-        text-align: center;
     }
-
-    /* make font for paragraph under the table  bigger*/
 
 
     /* make event column narrower */
