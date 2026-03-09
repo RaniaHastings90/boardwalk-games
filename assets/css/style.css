@@ -1,5 +1,3 @@
-
-
 /* google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap');
 
@@ -106,18 +104,23 @@ h2 {
 
 /* Events */
 
-#events .discount-background {
-    /* student discount paragraph styling default on small screen */
-    display: block;
-    background-color: var(--highlight-color);
-    color: white;
-    font-size: 0.8rem;
+#events .table {
+    /* events table font size small enough that 
+      the table doesn't overflow on xs screens. 
+      Size set back to 1rem in a media query 
+      for sm screens and up */
+    font-size: 0.7rem;
 }
 
-/* make table smaller */
-
-#events .table {
-    font-size: 0.7rem;
+.student-discount {
+    background-color: var(--highlight-color);
+    font-weight: bold;
+    color: white;
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 5px 10px;
+    font-size: 0.8rem;
 }
 
 /* Game library sections */
@@ -167,6 +170,18 @@ h2 {
 
 /* media queries */
 
+/* Small screens and up */
+@media screen and (min-width: 576px) {
+
+    /* increase font size in events table when screen size is large enough */
+    #events .table {
+        font-size: 1rem;
+    }
+
+    .student-discount {
+        font-size: 1rem;
+    }
+}
 
 /* medium devices (tablets, 768px and up)*/
 @media screen and (min-width: 768px) {
@@ -175,32 +190,8 @@ h2 {
     #services .card-body {
         min-height: 191px;
     }
-
-    /* Events section*/
-
-    #events .discount-background {
-        /* styling for paragraph under the event table */
-        background-color: var(--highlight-color);
-        color: white;
-        font-size: 1rem;
-    }
-
-
-    /* make event column narrower */
-    #events .event-col {
-        width: 33%;
-    }
-
-    /* make date column narrower */
-    #events .date-col {
-        width: 18%;
-    }
-
-    /* make table font-size larger */
-    #events .table {
-        font-size: 1rem;
-    }
 }
+
 
 /* large devices (small laptops, 992px and up)*/
 @media screen and (min-width: 992px) {
@@ -218,22 +209,6 @@ h2 {
     #services .card-body {
         min-height: 220px;
     }
-
-
-    /* Events section-  */
-
-    #events .discount-background * {
-        /* make the background shrink to fit text width */
-        background-color: var(--highlight-color);
-        color: white;
-        font-size: 1rem;
-    }
-
-    /* make table font bigger */
-    #events .table {
-        font-size: 1rem;
-    }
-
 }
 
 /* XXL devices (larger desktops, 1400px and up)*/
@@ -242,11 +217,5 @@ h2 {
     /* Make all services cards the same height for consistency */
     #services .card-body {
         min-height: 195px;
-    }
-
-    /* make date column in event section wider */
-
-    #events .date-col {
-        width: 20%;
     }
 }
